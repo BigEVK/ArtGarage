@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
 :root {
   --blue: #6e9fb7;
   --med-blue: #b1d8ec;
@@ -77,12 +78,15 @@ ul {
 }
 
 .menu-items a {
+  position: relative;
   display: block;
+  top: 10px;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 36px;
   padding-bottom: 7px;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
   color: var(--lt-blue);
   border-bottom: 4px solid transparent;
   align-items: center;
@@ -174,8 +178,9 @@ ul {
 }
 
 .welcome-headline {
-  font-weight: 400;
-  font-size: 42px;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 42px;
   padding-bottom: 20px;
 }
 
@@ -184,4 +189,34 @@ ul {
   line-height: 25px;
   color: var(--med-gray);
 }
+
+/* SIGN UP OPTIONS */
+.signup-options {
+  margin-top: 25px;
+  text-align: left;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 70%;
+}
+
+.artist-signup {
+  background-color: var(--blue);
+  margin-right: 20px;
+}
+
+.buyer-signup {
+  background-color: var(--green);
+}
+
 
