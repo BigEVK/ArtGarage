@@ -6,6 +6,7 @@
   --med-blue: #b1d8ec;
   --lt-blue: #d6e5ea;
   --green: #8faa75;
+  --lt-green: #dff1ce;
   --med-gray: #666666;
 }
 
@@ -178,10 +179,10 @@ ul {
 }
 
 .welcome-headline {
-  font-weight: 300;
-  font-size: 32px;
+  font-weight: 400;
+  font-size: 30px;
   line-height: 42px;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
 }
 
 .about-us {
