@@ -1,1 +1,22 @@
-;
+    {{!-- Dashboard content container --}}
+    <div class="dashboard-container">
+          <div class="dashboard-heading">
+          <h1 class="dashboard-title">Welcome to the Artist Showcase Page!</h1>
+        <p class="dashboard-text">Click <span class="view-profile-dashboard">View full profile</span> to reveal the full bio of each artist.</p>
+        </div>
+        {{!-- This column holds the artwork thumbnail and artist info container: --}}
+        <div class="dashboard-artist-column">
+            <div class="feature-artist-container">
+              {{!-- This container holds the img/artwork thumbnail: --}}
+              <div class="artwork-container">
+                <img class="artwork-image" src="../../images/painting-sample.jpg" alt="nature oil paiting">
+              </div>
+              {{!-- This container holds the artist name, short bio snippet and link to profile: --}}
+              <div class="artist-info">
+                <h2 class="artist-name">Jonathan Franklin</h2>
+                <p class="artist-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, alias consequatur eius facere blanditiis hic, pariatur perspiciatis labore asperiores dolorem beatae repellat earum inventore placeat nobis expedita? Porro ducimus iusto tenetur harum consequatur fugiat.</p>
+                <a href="/bio"><h2 class="view-profile">View full profile <span class="arrow">&#11136</span></h2></a>
+              </div>
+            </div>
+        </div>
+    </div>
