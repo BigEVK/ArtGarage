@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Garage App</title>
     <link rel="stylesheet" href="../../style.css" />
+    <link href="css/star-rating.css" rel="stylesheet">
   </head>
   <body>
 
@@ -62,10 +63,28 @@
         </div>
       </main>
       {{!-- MAIN CONTENT END --}}
+
+
+<select class="star-rating">
+    <option value="">Select a rating</option>
+    <option value="5">Excellent</option>
+    <option value="4">Very Good</option>
+    <option value="3">Average</option>
+    <option value="2">Poor</option>
+    <option value="1">Terrible</option>
+</select>
+
+
+
       <footer>
         Thank you for visiting Art Garage!
       </footer>
     </div>
+    
+<script src="js/star-rating.min.js"></script>
+<script>
+    var stars = new StarRating('.star-rating');
+</script>
 
   </body>
 </html>
