@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 
+
 /* CSS VARIABLES FOR APP COLOR PALETTE */
 :root {
   --blue: #6e9fb7;
@@ -9,15 +10,22 @@
   --lt-blue: #d6e5ea;
   --green: #8faa75;
   --lt-green: #dff1ce;
+  --lt-gray: #989898;
   --med-gray: #666666;
   --drk-gray: #212121;
 }
+
 
 /* CSS GLOBAL STYLES FOR APP */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+html {
+  min-height: 100%;
 }
 
 body {
@@ -40,9 +48,8 @@ ul {
   list-style-type: none;
 }
 
-/* ======================================= */
 
-/* START -- HEADER AND NAV/MENU */
+/* ===== START -- HEADER AND NAV/MENU ===== */
 .header-container {
   position: relative;
   display: flex;
@@ -112,19 +119,17 @@ ul {
 }
 /* END -- HEADER AND NAV/MENU */
 
-/* ======================================= */
 
-/* HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER */
+/* ====HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER==== */
 .content-row-container {
   display: flex;
   width: 80%;
   height: 100%;
-  margin: 70px auto;
+  margin: 80px auto 0 auto;
 }
 
-/* ======================================= */
 
-/* HOMEPAGE -- ARTIST COLUMN */
+/* ======= HOMEPAGE -- ARTIST COLUMN ======= */
 .artist-column {
   width: 65%;
 }
@@ -136,10 +141,7 @@ ul {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.feature-artist-container:hover {
-  box-shadow: 0px 5px 7px rgba(110, 159, 183, 0.3);
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.1);
 }
 
 .artwork-image {
@@ -183,9 +185,8 @@ ul {
 }
 /* END -- HOMEPAGE -- ARTIST COLUMN */
 
-/* ======================================= */
 
-/* HOMEPAGE -- WELCOME COLUMN */
+/* ====== HOMEPAGE -- WELCOME COLUMN ======= */
 .welcome-column {
   width: 35%;
   margin-left: 55px;
@@ -212,6 +213,7 @@ ul {
   text-align: left;
 }
 
+/* BUTTONS */
 button {
   cursor: pointer;
   padding: 10px 20px;
@@ -236,9 +238,8 @@ button:hover {
 }
 /* END -- HOMEPAGE -- WELCOME COLUMN */
 
-/* ======================================= */
 
-/* START -- DASHBOARD STYLES */
+/* =======START -- DASHBOARD STYLES========= */
 .dashboard-container {
   width: 80%;
   margin: auto;
@@ -274,51 +275,61 @@ button:hover {
 }
 /* END -- DASHBOARD STYLES */
 
-/* ======================================= */
 
-/* START -- SIGNUP STYLES */
-
+/* ======== START -- SIGNUP STYLES ========= */
 .signup-container {
   margin: auto;
   width: 80%;
-  padding-top: 50px;
+  padding-top: 40px;
 }
-
-/* form label {
-  display: block;
-  width: 100%;
-} */
 
 label {
   display: block;
   width: 100%;
-  padding: 10px 0;
+  padding: 0px 0px 5px 0px;
   margin: 0;
-  font-size: 18px;
-  color: var(--drk-gray);
+  font-size: 16px;
+  color: var(--med-gray);
+}
+
+textarea {
+  outline-color: #afd4e2;
 }
 
 textarea {
   width: 100%;
   height: 20px;
   min-height: 100px;
+  padding: 10px;
+  border: 3px solid #deebf0;
+  border-radius: 5px;
+  margin: 0px 0px 18px 0px;
 }
 
 input {
+  outline-color: #afd4e2;
+}
+
+input {
+  padding: 10px;
+  margin: 0px 0px 18px 0px;
   width: 100%;
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #deebf0;
+  font-size: 16px;
+  border: 0.2rem solid #deebf0;
+  border-radius: 4px;
 }
 
-.signup-form {
+.buyer-signup-form, .artist-signup-form {
   margin: auto;
-  width: 60%;
-  padding: 25px;
+  /* width: 100%; */
+  padding: 35px;
+  max-width: 800px;
 }
 
-.signup-title {
+.buyer-signup-title, .artist-signup-title {
   text-align: center;
   font-weight: 400;
   font-size: 42px;
@@ -328,7 +339,7 @@ input {
   color: var(--drk-gray);
 }
 
-.signup-text {
+.buyer-signup-text, .artist-signup-text {
   text-align: center;
   font-size: 17px;
   line-height: 25px;
@@ -339,12 +350,14 @@ input {
 .form-container {
   position: relative;
   background-color: white;
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.2);
   padding: 25px;
   border-radius: 10px;
 }
 
 .signup-or-login-container {
   display: flex;
+  padding-top: 10px;
 }
 
 .buyer-signup-button {
@@ -369,9 +382,48 @@ input {
   opacity: 70%;
 }
 
-/* ======================================= */
 
-/* FOOTER */
+/* ARTIST BUTTONS & INPUTS */
+.snippet {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.artist-signup-button {
+  margin: 25px 0 0 0;
+  background-color: var(--blue);
+  border: 3px solid var(--blue);
+}
+
+.artist-login-button {
+  margin: 25px 0 0 25px;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+}
+
+.artist-login-button:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.artist-signup-button:hover {
+  opacity: 70%;
+}
+
+.upload-image {
+  color: white;
+  background-color: var(--med-gray);
+}
+
+.upload-image:hover {
+  background-color: var(--drk-gray);
+  opacity: 1;
+}
+/* END -- SIGNUP STYLES */
+
+
+/* ========= FOOTER ========== */
 footer {
   text-align: center;
   background-color: rgba(110, 159, 183, 0.4);
@@ -381,7 +433,8 @@ footer {
   color: var(--drk-gray);
 }
 
-/* ======================================= */
+
+/* ===== MEDIA QUERIES ===== */
 
 
 
