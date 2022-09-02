@@ -1,1 +1,68 @@
-;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Garage App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <!-- HEADING START -->
+      <header class="header-container">
+        <div class="nav-container">
+          <div class="logo">
+          <a href="/"><img src="../images/art-garage-logo.png" alt="art garage logo" class="art-garage-logo"/></a>
+          </div>
+          <nav class="menu">
+            <ul class="menu-items">
+              <li><a href="/">Home</a></li>
+              <li><a href="/artists">Artists</a></li>
+              <li><a href="/login">Login</a></li>
+              <li id="logout"><a href="/">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- HEADING END -->
+
+      <!-- MAIN CONTENT START -->
+      <main>
+        <!-- This container holds both columns: -->
+        <div class="content-row-container">
+
+          <!-- This column holds the artwork thumbnail and artist info container: -->
+          <div class="artist-column">
+            <div class="feature-artist-container">
+              <!-- This container holds the img/artwork thumbnail: -->
+              <div class="artwork-container">
+                <img class="artwork-image" src="/public/assets/images/painting-sample.jpg" alt="nature oil paiting">
+              </div>
+              <!-- This container holds the artist name, short bio snippet and link to profile: -->
+              <div class="artist-info">
+                <h2 class="artist-name">Jonathan Franklin</h2>
+                <p class="artist-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, alias consequatur eius facere blanditiis hic, pariatur perspiciatis labore asperiores dolorem beatae repellat earum inventore placeat nobis expedita? Porro ducimus iusto tenetur harum consequatur fugiat.</p>
+                <a href="/bio"><h2 class="view-profile">View full profile <span class="arrow">&#11136</span></h2></a>
+              </div>
+            </div>
+          </div>
+          <!-- This column holds the website heading, about info and signup options: -->
+          <div class="welcome-column">
+            <div class="intro">
+              <h1 class="welcome-headline">The place that brings artists and potential buyers together.</h1>
+              <p class="about-us">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, totam ratione temporibus explicabo adipisci repellat aperiam alias voluptate soluta. Voluptates veniam incidunt architecto iure fuga placeat facilis provident, odio eius itaque earum exercitationem maiores expedita quaerat adipisci repellendus voluptatibus natus dignissimos ratione. Autem adipisci, omnis recusandae doloribus laboriosam sit vitae soluta, voluptatum veniam quod nihil vel. Suscipit, nihil hic. Impedit quae numquam recusandae molestiae voluptates sapiente maiores tempora.</p>
+            </div>
+              <div class="signup-options">
+                <button type="submit" class="artist-signup">Artist Signup</button>
+                <button type="submit" class="buyer-signup">Buyer Signup</button>
+              </div>
+            </div>  
+          </div>
+
+        </div>
+      </main>
+      <!-- MAIN CONTENT END -->
+    </div>
+
+  </body>
+</html>

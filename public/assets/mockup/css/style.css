@@ -34,7 +34,7 @@ ul {
 .header-container {
   position: relative;
   display: flex;
-  background-image: url(/public/assets/images/header-background.jpg);
+  background-image: url(../../../images/header-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
