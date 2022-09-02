@@ -1,6 +1,8 @@
+/* FONTS IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 
+/* CSS VARIABLES FOR APP COLOR PALETTE */
 :root {
   --blue: #6e9fb7;
   --med-blue: #b1d8ec;
@@ -10,6 +12,7 @@
   --med-gray: #666666;
 }
 
+/* CSS GLOBAL STYLES FOR APP */
 * {
   padding: 0;
   margin: 0;
@@ -31,6 +34,9 @@ ul {
   list-style-type: none;
 }
 
+/* ======================================= */
+
+/* START -- HEADER AND NAV/MENU */
 .header-container {
   position: relative;
   display: flex;
@@ -98,14 +104,11 @@ ul {
   color: var(--med-blue);
   border-bottom: 4px solid var(--green);
 }
+/* END -- HEADER AND NAV/MENU */
 
-/* END OF HEADER AND NAV/MENU */
+/* ======================================= */
 
-/* main {
-  flex: 1;
-  padding: 2% 4%;
-} */
-
+/* HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER */
 .content-row-container {
   display: flex;
   width: 80%;
@@ -113,10 +116,11 @@ ul {
   margin: 70px auto;
 }
 
-/* ARTIST COLUMN */
+/* ======================================= */
+
+/* HOMEPAGE -- ARTIST COLUMN */
 .artist-column {
   width: 65%;
-  /* flex: 50%; */
 }
 
 .feature-artist-container {
@@ -170,12 +174,14 @@ ul {
   font-size: 11px;
   top: 3px;
 }
+/* END -- HOMEPAGE -- ARTIST COLUMN */
 
-/* WELCOME COLUMN */
+/* ======================================= */
+
+/* HOMEPAGE -- WELCOME COLUMN */
 .welcome-column {
   width: 35%;
   margin-left: 55px;
-  /* flex: 50%; */
 }
 
 .welcome-headline {
@@ -219,6 +225,45 @@ button:hover {
 .buyer-signup {
   background-color: var(--green);
 }
+/* END -- HOMEPAGE -- WELCOME COLUMN */
+
+/* ======================================= */
+
+/* START -- DASHBOARD STYLES */
+.dashboard-container {
+  width: 80%;
+  margin: auto;
+  padding-top: 75px;
+}
+
+.dashboard-artist-column {
+  width: 100%;
+}
+
+.dashboard-heading {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.dashboard-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 42px;
+  padding-bottom: 17px;
+}
+
+.dashboard-text {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--blue);
+}
+
+.view-profile-dashboard {
+  color: var(--green);
+}
+/* END -- DASHBOARD STYLES */
+
+/* ======================================= */
 
 /* FOOTER */
 footer {
@@ -228,6 +273,8 @@ footer {
   font-size: 20px;
   color: white;
 }
+
+/* ======================================= */
 
 
 
