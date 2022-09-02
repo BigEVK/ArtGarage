@@ -22,8 +22,13 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: var(--lt-blue);
   font-size: 16px;
+  background: #d5e1e5; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #d5e1e5 10%, #ebf7e1 74%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #d5e1e5 10%,#ebf7e1 74%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #d5e1e5 10%,#ebf7e1 74%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e1e5', endColorstr='#ebf7e1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 a {
@@ -274,10 +279,11 @@ button:hover {
 /* FOOTER */
 footer {
   text-align: center;
-  background-color: var(--blue);
-  padding: 15px 0;
-  font-size: 20px;
-  color: white;
+  background-color: rgba(110, 159, 183, 0.4);
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--drk-gray);
 }
 
 /* ======================================= */
