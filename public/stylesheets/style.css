@@ -10,6 +10,7 @@
   --green: #8faa75;
   --lt-green: #dff1ce;
   --med-gray: #666666;
+  --drk-gray: #212121;
 }
 
 /* CSS GLOBAL STYLES FOR APP */
@@ -147,6 +148,7 @@ ul {
 .artist-name {
   font-weight: 400;
   padding-bottom: 10px;
+  color: var(--drk-gray);
 }
 
 .artist-bio {
@@ -189,6 +191,8 @@ ul {
   font-size: 30px;
   line-height: 42px;
   padding-bottom: 17px;
+  letter-spacing: -0.03rem;
+  color: var(--drk-gray);
 }
 
 .about-us {
@@ -250,6 +254,8 @@ button:hover {
   font-size: 42px;
   line-height: 42px;
   padding-bottom: 17px;
+  letter-spacing: -0.05rem;
+  color: var(--drk-gray);
 }
 
 .dashboard-text {
