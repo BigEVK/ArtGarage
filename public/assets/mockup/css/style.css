@@ -220,4 +220,14 @@ button:hover {
   background-color: var(--green);
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: var(--blue);
+  padding: 15px 0;
+  font-size: 20px;
+  color: white;
+}
+
+
 
