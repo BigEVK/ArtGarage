@@ -276,6 +276,101 @@ button:hover {
 
 /* ======================================= */
 
+/* START -- SIGNUP STYLES */
+
+.signup-container {
+  margin: auto;
+  width: 80%;
+  padding-top: 75px;
+}
+
+/* form label {
+  display: block;
+  width: 100%;
+} */
+
+label {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-size: 18px;
+  color: var(--drk-gray);
+}
+
+textarea {
+  width: 100%;
+  height: 20px;
+  min-height: 100px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #deebf0;
+}
+
+.signup-form {
+  margin: auto;
+  width: 60%;
+  padding: 25px;
+}
+
+.signup-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 42px;
+  padding-bottom: 17px;
+  letter-spacing: -0.05rem;
+  color: var(--drk-gray);
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--med-gray);
+  padding-bottom: 25px;
+}
+
+.form-container {
+  position: relative;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.signup-or-login-container {
+  display: flex;
+}
+
+.buyer-signup-button {
+  margin: 25px 0 0 0;
+  background-color: var(--green);
+  border: 3px solid var(--green);
+}
+
+.buyer-login-button {
+  margin: 25px 0 0 25px;
+  background-color: white;
+  border: 3px solid var(--green);
+  color: var(--green);
+}
+
+.buyer-login-button:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+.buyer-signup-button:hover {
+  opacity: 70%;
+}
+
+/* ======================================= */
+
 /* FOOTER */
 footer {
   text-align: center;
