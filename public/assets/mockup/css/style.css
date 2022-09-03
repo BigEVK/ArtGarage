@@ -145,7 +145,8 @@ ul {
 }
 
 .artwork-image {
-  width: 200px;
+  max-width: 200px;
+  object-fit: fill;
 }
 
 .artist-info {
@@ -277,7 +278,7 @@ button:hover {
 
 
 /* ======== START -- SIGNUP STYLES ========= */
-.signup-container, .login-container {
+.signup-container, .login-container, .artist-update-profile-container {
   margin: auto;
   width: 80%;
   padding-top: 40px;
@@ -322,13 +323,13 @@ input {
   border-radius: 4px;
 }
 
-.buyer-signup-form, .artist-signup-form, .login-form {
+.buyer-signup-form, .artist-signup-form, .login-form, .artist-update-form {
   margin: auto;
   padding: 35px;
   max-width: 800px;
 }
 
-.buyer-signup-title, .artist-signup-title, .login-title {
+.buyer-signup-title, .artist-signup-title, .login-title, .artist-update-title {
   text-align: center;
   font-weight: 400;
   font-size: 42px;
@@ -338,7 +339,7 @@ input {
   color: var(--drk-gray);
 }
 
-.buyer-signup-text, .artist-signup-text, .login-text {
+.buyer-signup-text, .artist-signup-text, .login-text, .artist-update-text {
   text-align: center;
   font-size: 17px;
   line-height: 25px;
@@ -354,7 +355,7 @@ input {
   border-radius: 10px;
 }
 
-.signup-or-login-container {
+.signup-or-login-container, .artist-update-container {
   display: flex;
   padding-top: 10px;
 }
@@ -381,13 +382,17 @@ input {
   opacity: 70%;
 }
 
-.login-button {
+.login-button, .signup-button {
   background-color: white;
   border: 3px solid var(--green);
   color: var(--green);
 }
 
-.login-button:hover {
+.signup-button {
+  margin-left: 20px;
+}
+
+.login-button:hover, .signup-button:hover {
   background-color: var(--green);
   color: white;
 }
@@ -412,7 +417,15 @@ input {
   color: var(--blue);
 }
 
-.artist-login-button:hover {
+.artist-update-profile-button {
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 240px
+}
+
+.artist-login-button:hover, .artist-update-profile-button:hover {
   background-color: var(--blue);
   color: white;
 }
@@ -444,7 +457,128 @@ footer {
 }
 
 
-/* ===== MEDIA QUERIES ===== */
+/* -------- MEDIA QUERIES: 980px -------- */
+@media screen and (max-width: 980px) {
+    .artwork-image {
+    width: auto;
+    height: 233px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .artist-info {
+    padding: 20px;
+  }
+
+  .artist-name {
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+
+  .artist-bio {
+    font-size: 13px;
+    line-height: 19px;
+    padding-bottom: 10px;
+  }
+
+  .welcome-headline {
+    line-height: 38px;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .signup-options {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .artist-signup {
+    margin-right: 15px;
+  }
+}
+
+
+/* -------- MEDIA QUERIES: 768px -------- */
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 220px;
+  }
+
+  .menu-items a {
+    font-size: 20px;
+  }
+  .content-row-container {
+    margin-top: 60px;
+  }
+
+  #feature-content {
+    flex-wrap: wrap;
+  }
+
+  .artwork-container {
+    min-width: 100%;
+  }
+
+  .artwork-image {
+    object-fit: cover;
+    min-width: 100%;
+    object-position: center;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .signup-options {
+    display: block;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .artist-signup {
+    margin-bottom: 15px;
+  }
+}
+
+
+/* -------- MEDIA QUERIES: 575px -------- */
+@media screen and (max-width: 575px) {
+  #content-container {
+    position: relative;
+  flex-wrap: wrap;
+}
+
+  .welcome-column {
+    margin: auto;
+    width: 500px;
+    position: absolute;
+    display: block;
+    width: 500px;
+  }
+
+  .welcome-headline {
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
 
 
 
