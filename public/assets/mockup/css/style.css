@@ -356,6 +356,7 @@ input {
 }
 
 .signup-or-login-container, .artist-update-container {
+  align-items: center;
   display: flex;
   padding-top: 10px;
 }
@@ -422,12 +423,43 @@ input {
   background-color: white;
   border: 3px solid var(--blue);
   color: var(--blue);
-  width: 240px
+}
+
+.artist-view-profile-button {
+  background-color: white;
+  border: 3px solid var(--green);
+  color: var(--green);
+  margin: 15px 0 0 15px;
+  transition: all 0.3s;
+  width: 143px;
+}
+
+.artist-view-profile-button:hover {
+  background-color: var(--green);
+  border: 3px solid var(--green);
+  color: white;
+  opacity: 1;
+}
+
+.artist-delete-profile-button {
+  background-color: white;
+  border: 3px solid rgb(219, 20, 20);
+  color: rgb(219, 20, 20);
+  margin: 15px 0 0 15px;
+  transition: all 0.3s;
+}
+
+.artist-delete-profile-button:hover {
+  background-color: rgb(219, 20, 20);
+   border: 3px solid rgb(219, 20, 20);
+  color: white;
+  opacity: 1;
 }
 
 .artist-login-button:hover, .artist-update-profile-button:hover {
   background-color: var(--blue);
   color: white;
+  opacity: 1;
 }
 
 .artist-signup-button:hover {
@@ -435,12 +467,29 @@ input {
 }
 
 .upload-image {
+  margin-top: 6px;
   color: white;
   background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
 }
 
 .upload-image:hover {
   background-color: var(--drk-gray);
+  border: 3px solid black;
+  opacity: 1;
+}
+
+.delete-image {
+  margin-top: 6px;
+  color: white;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  margin-left: 14px;
+}
+
+.delete-image:hover {
+  background-color: rgb(219, 20, 20);
+  border: 3px solid rgb(219, 20, 20);
   opacity: 1;
 }
 /* END -- SIGNUP STYLES */
@@ -496,12 +545,29 @@ input {
   flex-wrap: wrap;
   margin: 0 auto 10px auto;
   width: 80%;
+  justify-content: space-between;
 }
 
 #comments-title {
   text-align: left;
-  padding-left: 35px;
+  margin-left: 35px;
   color: var(--med-gray);
+}
+
+.leave-comment-button {
+  margin-right: 35px;
+  width: 175px;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  color: var(--blue);
+  color: white;
+  transition: all 0.3s;
+}
+
+.leave-comment-button:hover {
+  background-color: black;
+  border: 3px solid black;
+  opacity: 1;
 }
 
 #url-link {
@@ -556,11 +622,10 @@ input {
 
 .update-profile-button {
   position: relative;
-  margin: 15px 0 0 0;
   background-color: white;
   border: 3px solid var(--blue);
   color: var(--blue);
-  top: 241px;
+  top: 260px;
 }
 
 .update-profile-button:hover, .submit-buyer-comment:hover {
