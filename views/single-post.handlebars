@@ -10,19 +10,29 @@
               <textarea name="comment-text" id="comment-text" rows="5"></textarea>
             </div>
             <div class="submit-comment">
-              <button class="submit-buyer-comment">Submit Comment</button>
+              <a href="/profile/1" class="submit-buyer-comment">Submit Comment</a>
+            <div class="star-rating-container">
+               <select class="star-rating">
+                  <option value="">Select A Rating</option>
+                  <option value="5">Excellent</option>
+                  <option value="4">Very Good</option>
+                  <option value="3">Average</option>
+                  <option value="2">Poor</option>
+                  <option value="1">Terrible</option>
+               </select>
+             </div>
             </div>
         </form>
       </div>
 
-    <select class="star-rating">
+    {{!-- <select class="star-rating">
       <option value="">Select a rating</option>
       <option value="5">Excellent</option>
       <option value="4">Very Good</option>
       <option value="3">Average</option>
       <option value="2">Poor</option>
       <option value="1">Terrible</option>
-    </select>
+    </select> --}}
 
     <script src="/javascript/star-rating-min.js"></script>
     <script>

@@ -449,6 +449,64 @@ input {
   text-align: center;
 }
 
+.submit-comment {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.submit-buyer-comment {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 165px;
+  text-align: center;
+}
+
+.star-rating-container {
+  margin-left: 15px;
+}
+
+.star-rating {
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 175px;
+  text-align: center;
+  outline: none;
+  border: 3px solid var(--blue);
+  transition: all 0.3s;
+}
+
+.star-rating:hover {
+  background-color: var(--blue);
+  border: 3px solid var(--blue);
+  color: white;
+  opacity: 1;
+}
+
+select {
+  appearance: none;
+  font-family: 'Roboto Condensed';
+
+}
+
 .artist-view-profile-button {
   cursor: pointer;
   padding: 10px 20px;
@@ -698,14 +756,6 @@ input {
 .buyer-comments {
   font-style: italic;
   font-size: 16px;
-}
-
-.submit-buyer-comment {
-  position: relative;
-  margin: 15px 0 0 0;
-  background-color: white;
-  border: 3px solid var(--blue);
-  color: var(--blue);
 }
 
 /* ========= FOOTER ========== */
