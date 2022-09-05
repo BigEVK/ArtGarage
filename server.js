@@ -25,10 +25,11 @@ const sess = {
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(session(sess));
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
-app.use(session(sess));
+app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -36,7 +37,7 @@ app.use(express.urlencoded({
 }));
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => 
-    console.log(`App listening on port ${PORT}!`));
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+    sequelize.sync({ force: false });
 });
