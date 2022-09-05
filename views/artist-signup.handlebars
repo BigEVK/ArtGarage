@@ -1,0 +1,32 @@
+<div class="signup-container">
+  <form
+    action="/profile"
+    enctype="multipart/form-data"
+    method="post"
+    class="artist-signup-form"
+  >
+    <h1 class="artist-signup-title">Welcome to the Artist Signup Page!</h1>
+    <p class="artist-signup-text">Please fill out all of the required
+      information in order to become a featured artist.</p>
+    <div class="form-container">
+      <div>
+        <label for="artist-signup-username">Username</label>
+        <input type="text" id="buyer-signup-username" />
+      </div>
+      <div>
+        <label for="email-signup" class="email-signup">Email Address</label>
+        <input type="text" id="email-signup" />
+      </div>
+      <div>
+        <label for="password-signup">Password</label>
+        <input type="password" id="password-signup" />
+      </div>
+      <div class="signup-or-login-container">
+        <button type="submit" class="artist-signup-button">Sign Up!</button>
+        <a href="/login" class="login-link"><button
+            class="artist-login-button"
+          >Login Instead</button></a>
+      </div>
+    </div>
+  </form>
+</div>
