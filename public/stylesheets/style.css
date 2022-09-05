@@ -1,6 +1,7 @@
 /* FONTS IMPORT */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
 
 /* CSS VARIABLES FOR APP COLOR PALETTE */
 :root {
@@ -9,37 +10,33 @@
   --lt-blue: #d6e5ea;
   --green: #8faa75;
   --lt-green: #dff1ce;
+  --lt-gray: #989898;
   --med-gray: #666666;
   --drk-gray: #212121;
 }
+
 
 /* CSS GLOBAL STYLES FOR APP */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+html {
+    min-height: 100%;
 }
 
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
   background: #d5e1e5; /* Old browsers */
-  background: -moz-linear-gradient(
-    -45deg,
-    #d5e1e5 10%,
-    #ebf7e1 74%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    -45deg,
-    #d5e1e5 10%,
-    #ebf7e1 74%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    135deg,
-    #d5e1e5 10%,
-    #ebf7e1 74%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(-45deg,  #d5e1e5 10%, #ebf7e1 74%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #d5e1e5 10%,#ebf7e1 74%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #d5e1e5 10%,#ebf7e1 74%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e1e5', endColorstr='#ebf7e1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 a {
@@ -51,9 +48,8 @@ ul {
   list-style-type: none;
 }
 
-/* ======================================= */
 
-/* START -- HEADER AND NAV/MENU */
+/* ===== START -- HEADER AND NAV/MENU ===== */
 .header-container {
   position: relative;
   display: flex;
@@ -68,6 +64,7 @@ ul {
   position: sticky;
   z-index: 9999;
   top: 0;
+  
 }
 
 .nav-container {
@@ -113,7 +110,7 @@ ul {
   color: var(--lt-blue);
   border-bottom: 4px solid transparent;
   align-items: center;
-  transition: all 0.4s;
+  transition: all 0.4s
 }
 
 .menu-items a:hover {
@@ -122,19 +119,17 @@ ul {
 }
 /* END -- HEADER AND NAV/MENU */
 
-/* ======================================= */
 
-/* HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER */
+/* ====HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER==== */
 .content-row-container {
   display: flex;
   width: 80%;
   height: 100%;
-  margin: 70px auto;
+  margin: 80px auto 0 auto;
 }
 
-/* ======================================= */
 
-/* HOMEPAGE -- ARTIST COLUMN */
+/* ======= HOMEPAGE -- ARTIST COLUMN ======= */
 .artist-column {
   width: 65%;
 }
@@ -146,23 +141,29 @@ ul {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.feature-artist-container:hover {
-  box-shadow: 0px 5px 7px rgba(110, 159, 183, 0.3);
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.1);
 }
 
 .artwork-image {
-  width: 200px;
+  max-width: 200px;
+  object-fit: cover;
 }
 
 .artist-info {
   padding: 25px;
 }
 
-.artist-name {
+.artist-info .artist-name {
+  font-size: 26px;
   font-weight: 400;
   padding-bottom: 10px;
+  color: var(--drk-gray);
+}
+
+.profile-artist-name {
+  font-size: 42px;
+  font-weight: 400;
+  padding-bottom: 20px;
   color: var(--drk-gray);
 }
 
@@ -193,9 +194,8 @@ ul {
 }
 /* END -- HOMEPAGE -- ARTIST COLUMN */
 
-/* ======================================= */
 
-/* HOMEPAGE -- WELCOME COLUMN */
+/* ====== HOMEPAGE -- WELCOME COLUMN ======= */
 .welcome-column {
   width: 35%;
   margin-left: 55px;
@@ -218,10 +218,11 @@ ul {
 
 /* SIGN UP OPTIONS */
 .signup-options {
-  margin-top: 25px;
+  margin-top: 35px;
   text-align: left;
 }
 
+/* BUTTONS */
 button {
   cursor: pointer;
   padding: 10px 20px;
@@ -246,9 +247,8 @@ button:hover {
 }
 /* END -- HOMEPAGE -- WELCOME COLUMN */
 
-/* ======================================= */
 
-/* START -- DASHBOARD STYLES */
+/* ==== START -- DASHBOARD STYLES ====== */
 .dashboard-container {
   width: 80%;
   margin: auto;
@@ -276,7 +276,7 @@ button:hover {
 .dashboard-text {
   font-size: 18px;
   line-height: 25px;
-  color: var(--blue);
+  color: var(--med-gray);
 }
 
 .view-profile-dashboard {
@@ -284,9 +284,478 @@ button:hover {
 }
 /* END -- DASHBOARD STYLES */
 
-/* ======================================= */
 
-/* FOOTER */
+/* ======== START -- SIGNUP STYLES ========= */
+.signup-container, .login-container, .artist-update-profile-container, .buyer-single-post-container {
+  margin: auto;
+  width: 80%;
+  padding-top: 40px;
+}
+
+label {
+  display: block;
+  width: 100%;
+  padding: 0px 0px 5px 0px;
+  margin: 0;
+  font-size: 16px;
+  color: var(--med-gray);
+}
+
+textarea {
+  outline-color: #afd4e2;
+}
+
+textarea {
+  width: 100%;
+  height: 20px;
+  min-height: 100px;
+  padding: 10px;
+  border: 3px solid #deebf0;
+  border-radius: 5px;
+  margin: 0px 0px 18px 0px;
+}
+
+input {
+  outline-color: #afd4e2;
+}
+
+input {
+  padding: 10px;
+  margin: 0px 0px 18px 0px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  border: 0.2rem solid #deebf0;
+  border-radius: 4px;
+}
+
+.buyer-signup-form, .artist-signup-form, .login-form, .artist-update-form {
+  margin: auto;
+  padding: 35px;
+  max-width: 800px;
+}
+
+.buyer-signup-title, .artist-signup-title, .login-title, .artist-update-title, .buyer-comment-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 42px;
+  padding-bottom: 17px;
+  letter-spacing: -0.05rem;
+  color: var(--drk-gray);
+}
+
+.buyer-signup-text, .artist-signup-text, .login-text, .artist-update-text {
+  text-align: center;
+  font-size: 17px;
+  line-height: 25px;
+  color: var(--med-gray);
+  padding-bottom: 25px;
+}
+
+.form-container, .buyer-comment-form{
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.2);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.signup-or-login-container, .artist-update-container {
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
+}
+
+.buyer-signup-button {
+  margin: 25px 0 0 15px;
+  background-color: var(--green);
+  border: 3px solid var(--green);
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.buyer-login-button {
+  margin: 25px 0 0 25px;
+  background-color: white;
+  border: 3px solid var(--green);
+  color: var(--green);
+}
+
+.buyer-login-button:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+.buyer-signup-button:hover {
+  opacity: 70%;
+}
+
+.login-button, .signup-button {
+  background-color: white;
+  border: 3px solid var(--green);
+  color: var(--green);
+}
+
+.signup-button {
+  margin-left: 20px;
+}
+
+.login-button:hover, .signup-button:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+
+/* ARTIST BUTTONS & INPUTS */
+.snippet {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.artist-signup-button {
+  margin: 25px 0 0 0;
+  background-color: var(--blue);
+  border: 3px solid var(--blue);
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.artist-login-button {
+  margin: 25px 0 0 25px;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+}
+
+.artist-update-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 145px;
+  text-align: center;
+}
+
+.submit-comment {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.submit-buyer-comment {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 165px;
+  text-align: center;
+}
+
+.star-rating-container {
+  margin-left: 15px;
+}
+
+/* .star-rating {
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin: 15px 0 0 0;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  width: 175px;
+  text-align: center;
+  outline: none;
+  border: 3px solid var(--blue);
+  transition: all 0.3s;
+}
+.star-rating:hover {
+  background-color: var(--blue);
+  border: 3px solid var(--blue);
+  color: white;
+  opacity: 1;
+}
+select {
+  appearance: none;
+  font-family: 'Roboto Condensed';
+} */
+
+.artist-view-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: white;
+  border: 3px solid var(--green);
+  color: var(--green);
+  margin: 15px 0 0 17px;
+  transition: all 0.3s;
+  width: 143px;
+  text-align: center;
+}
+
+.artist-view-profile-button:hover {
+  background-color: var(--green);
+  border: 3px solid var(--green);
+  color: white;
+  opacity: 1;
+}
+
+.artist-delete-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: white;
+  border: 3px solid rgb(219, 20, 20);
+  color: rgb(219, 20, 20);
+  margin: 15px 0 0 17px;
+  transition: all 0.3s;
+}
+
+.artist-delete-profile-button:hover {
+  background-color: rgb(219, 20, 20);
+   border: 3px solid rgb(219, 20, 20);
+  color: white;
+  opacity: 1;
+}
+
+.artist-login-button:hover, .artist-update-profile-button:hover {
+  background-color: var(--blue);
+  color: white;
+  opacity: 1;
+}
+
+.artist-signup-button:hover {
+  opacity: 70%;
+}
+
+.upload-image {
+  margin-top: 6px;
+  color: white;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+}
+
+.upload-image:hover {
+  background-color: var(--drk-gray);
+  border: 3px solid black;
+  opacity: 1;
+}
+
+.delete-image {
+  margin-top: 6px;
+  color: white;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  margin-left: 14px;
+}
+
+.delete-image:hover {
+  background-color: rgb(219, 20, 20);
+  border: 3px solid rgb(219, 20, 20);
+  opacity: 1;
+}
+/* END -- SIGNUP STYLES */
+
+
+/* ========= ARTIST PROFILE PAGE ========== */
+.artist-profile-container, .profile-comments-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 30px auto;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  padding-top: 50px;
+}
+.profile-comments-container {
+  padding-top: 0;
+  margin-bottom: 55px;
+}
+
+.comments-container {
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.2);
+  padding: 35px;
+  border-radius: 10px;
+}
+
+.profile-container {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 5px 11px rgba(110, 159, 183, 0.2);
+  padding: 35px;
+  border-radius: 10px;
+}
+
+.artist-name {
+  font-size: 44px;
+}
+
+.profile-heading {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--lt-gray);
+}
+
+.comments-heading-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 10px auto;
+  width: 80%;
+  justify-content: space-between;
+}
+
+#comments-title {
+  text-align: left;
+  margin-left: 35px;
+  color: var(--med-gray);
+}
+
+.leave-comment-button {
+  margin-right: 35px;
+  width: 175px;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  color: var(--blue);
+  color: white;
+  transition: all 0.3s;
+}
+
+.leave-comment-link {
+  text-align: center;
+  margin-right: 35px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  transition: all 0.3s;
+  width: 175px;
+}
+
+.leave-comment-link:hover {
+  background-color:black;
+  border: 3px solid black;
+  opacity: 1;
+}
+
+.leave-comment-button:hover {
+  background-color: black;
+  border: 3px solid black;
+  opacity: 1;
+}
+
+#url-link {
+  font-size: 24px;
+  color: var(--blue);
+  transition: all 0.3s;
+}
+
+#url-link:hover {
+  opacity: 0.6;
+}
+
+#full-profile-bio {
+  margin: 15px 0;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.descriptors {
+  display: flex;
+  margin: 20px 0;
+}
+
+.descriptors p {
+  padding-left: 7px;
+  font-size: 20px;
+}
+
+.title, .price {
+  display: flex;
+  margin-right: 35px;
+  align-items: center;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+}
+
+#artwork-description {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.artwork-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-profile-button {
+  position: relative;
+  background-color: white;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  top: 260px;
+}
+
+.update-profile-button:hover, .submit-buyer-comment:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.comment-title {
+  padding-bottom: 8px;
+}
+
+.buyer-comments {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* ========= FOOTER ========== */
 footer {
   text-align: center;
   background-color: rgba(110, 159, 183, 0.4);
@@ -296,4 +765,137 @@ footer {
   color: var(--drk-gray);
 }
 
-/* ======================================= */
+
+/* -------- MEDIA QUERIES: 980px -------- */
+@media screen and (max-width: 980px) {
+    .artwork-image {
+    width: auto;
+    height: 233px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .artist-info {
+    padding: 20px;
+  }
+
+  .artist-name {
+    font-size: 20px;
+    padding-bottom: 8px;
+  }
+
+  .artist-bio {
+    font-size: 13px;
+    line-height: 19px;
+    padding-bottom: 10px;
+  }
+
+  .welcome-headline {
+    line-height: 38px;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .signup-options {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .artist-signup {
+    margin-right: 15px;
+  }
+
+  .feature-artist-container {
+    flex-direction: column;
+  }
+
+  .artwork-image {
+    max-width: 100%;
+    height: 350px;
+    width: 100%
+  }
+}
+
+
+/* -------- MEDIA QUERIES: 768px -------- */
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 220px;
+  }
+
+  .menu-items a {
+    font-size: 20px;
+  }
+  .content-row-container {
+    margin-top: 60px;
+  }
+
+  #feature-content {
+    flex-wrap: wrap;
+  }
+
+  .artwork-container {
+    min-width: 100%;
+  }
+
+  .artwork-image {
+    object-fit: cover;
+    min-width: 100%;
+    object-position: center;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .signup-options {
+    display: block;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .artist-signup {
+    margin-bottom: 15px;
+  }
+
+}
+
+
+/* -------- MEDIA QUERIES: 575px -------- */
+@media screen and (max-width: 575px) {
+  #content-container {
+    position: relative;
+    flex-wrap: wrap;
+}
+
+  .welcome-column {
+    margin: auto;
+    width: 500px;
+    position: absolute;
+    display: block;
+    width: 500px;
+  }
+
+  .welcome-headline {
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  .about-us {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
