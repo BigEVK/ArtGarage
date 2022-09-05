@@ -435,19 +435,34 @@ input {
 }
 
 .artist-update-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
   margin: 15px 0 0 0;
   background-color: white;
   border: 3px solid var(--blue);
   color: var(--blue);
+  width: 145px;
+  text-align: center;
 }
 
 .artist-view-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
   background-color: white;
   border: 3px solid var(--green);
   color: var(--green);
-  margin: 15px 0 0 15px;
+  margin: 15px 0 0 17px;
   transition: all 0.3s;
   width: 143px;
+  text-align: center;
 }
 
 .artist-view-profile-button:hover {
@@ -458,10 +473,16 @@ input {
 }
 
 .artist-delete-profile-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
   background-color: white;
   border: 3px solid rgb(219, 20, 20);
   color: rgb(219, 20, 20);
-  margin: 15px 0 0 15px;
+  margin: 15px 0 0 17px;
   transition: all 0.3s;
 }
 
