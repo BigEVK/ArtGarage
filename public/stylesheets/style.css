@@ -153,9 +153,17 @@ ul {
   padding: 25px;
 }
 
-.artist-name {
+.artist-info .artist-name {
+  font-size: 26px;
   font-weight: 400;
   padding-bottom: 10px;
+  color: var(--drk-gray);
+}
+
+.profile-artist-name {
+  font-size: 42px;
+  font-weight: 400;
+  padding-bottom: 20px;
   color: var(--drk-gray);
 }
 
@@ -210,7 +218,7 @@ ul {
 
 /* SIGN UP OPTIONS */
 .signup-options {
-  margin-top: 25px;
+  margin-top: 35px;
   text-align: left;
 }
 
@@ -362,9 +370,13 @@ input {
 }
 
 .buyer-signup-button {
-  margin: 25px 0 0 0;
+  margin: 25px 0 0 15px;
   background-color: var(--green);
   border: 3px solid var(--green);
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s;
 }
 
 .buyer-login-button {
@@ -409,6 +421,10 @@ input {
   margin: 25px 0 0 0;
   background-color: var(--blue);
   border: 3px solid var(--blue);
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s;
 }
 
 .artist-login-button {
@@ -562,6 +578,27 @@ input {
   color: var(--blue);
   color: white;
   transition: all 0.3s;
+}
+
+.leave-comment-link {
+  text-align: center;
+  margin-right: 35px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background-color: var(--med-gray);
+  border: 3px solid var(--med-gray);
+  transition: all 0.3s;
+  width: 175px;
+}
+
+.leave-comment-link:hover {
+  background-color:black;
+  border: 3px solid black;
+  opacity: 1;
 }
 
 .leave-comment-button:hover {
