@@ -19,7 +19,7 @@
 
 - Clone our repo to your computer
 
-- ...
+- npm i star-rating.js
 
 
 ## Animated Gifs/Pictures of App
