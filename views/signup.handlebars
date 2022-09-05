@@ -1,0 +1,25 @@
+      <div class="signup-container">
+        <form action="/api/users/signup" method="post" class="artist-signup-form">
+            <h1 class="artist-signup-title">Welcome to the {{ user_type }} Signup Page!</h1>
+            <p class="artist-signup-text">Please fill out all of the required information in order to become a member.</p>
+            <div class="form-container">
+            <div>
+              <label for="artist-signup-username">Username</label>
+              <input type="text" name="username" id="buyer-signup-username" />
+            </div>
+            <div>
+              <label for="email-signup" class="email-signup">Email Address</label>
+              <input type="email" name="email" id="email-signup" />
+            </div>
+            <div>
+              <label for="password-signup">Password</label>
+              <input type="password" name="password" id="password-signup" />
+            </div>
+            <div class="signup-or-login-container">
+              <input type="hidden" name="user_type" value="{{user_type}}">
+              <button type="submit" class="{{#if isArtist}}artist-signup-button{{else}}buyer-signup-button{{/if}}">Sign Up!</button>
+              <a href="/login" class="{{#if isArtist}}artist-login-button{{else}}buyer-login-button{{/if}} login-link">Login Instead</a>
+            </div>
+            </div>
+        </form>
+      </div>

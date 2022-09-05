@@ -136,6 +136,7 @@ ul {
 
 .feature-artist-container {
   display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;

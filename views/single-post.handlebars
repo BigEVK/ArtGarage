@@ -1,6 +1,6 @@
       <div class="buyer-single-post-container">
         <h1 class="buyer-comment-title">Post A Comment!</h1>
-        <form action="/comment" class="buyer-comment-form">
+        <form action="/api/comment" method="post" class="buyer-comment-form">
            <div>
               <label for="comment-title">Comment Title</label>
               <input type="title" id="comment-title" />
@@ -10,7 +10,7 @@
               <textarea name="comment-text" id="comment-text" rows="5"></textarea>
             </div>
             <div class="submit-comment">
-              <a href="/comment"><button class="submit-buyer-comment">Submit Comment</button></a>
+              <button class="submit-buyer-comment">Submit Comment</button>
             </div>
         </form>
       </div>
@@ -24,7 +24,7 @@
       <option value="1">Terrible</option>
     </select>
 
-    <script src="js/star-rating.min.js"></script>
+    <script src="/javascript/star-rating-min.js"></script>
     <script>
       var stars = new StarRating('.star-rating');
     </script>
