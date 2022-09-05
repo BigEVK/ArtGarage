@@ -1,7 +1,7 @@
-      <div class="artist-update-profile-container">
+<div class="artist-update-profile-container">
         <form action="/profile" enctype="multipart/form-data" method="post" class="artist-update-form">
             <h1 class="artist-update-title">Welcome to the Update Profile Page!</h1>
-            <p class="artist-update-text">Please fill out all of the required information in order to update your profile.</p>
+            <p class="artist-update-text">Please fill out all of the required information in order update your profile.</p>
             <div class="form-container">
             <div>
               <label for="artist-name">Your Name</label>
@@ -37,10 +37,21 @@
             </div>
             <div class="upload-file">
             <label for="image">Artwork File<span class="snippet"> ( image size no larger than 400px )</span></label>
-              <button type="submit" class="upload-image">Click Here To Upload Image</button> 
+              <button type="submit" class="upload-image">Upload Image</button> 
+              <button type="submit" class="delete-image">Delete Image</button>
             </div>
+
+            <!-- SAMPLE FORM -->
+            <!-- <form ref='uploadForm' id='uploadForm' action='http://localhost:8000/upload' method='post' encType="multipart/form-data">
+              <input type="file" name="sampleFile" />
+              <input type='submit' value='Upload!' />
+            </form>    -->
+            <!-- SAMPLE FORM -->
+            
             <div class="artist-update-container">
-              <a href="/login" class="update-link"><button class="artist-update-profile-button">Update My Profile</button></a>
+              <a href="/login" class="update-link"><button class="artist-update-profile-button">Update Profile</button></a>
+              <a href="/login" class="view-link"><button class="artist-view-profile-button">View Profile</button></a>
+              <a href="/login" class="delete-link"><button class="artist-delete-profile-button">Delete Profile</button></a>
             </div>
             </div>
         </form>
