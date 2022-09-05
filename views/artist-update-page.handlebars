@@ -1,0 +1,58 @@
+<div class="artist-update-profile-container">
+        <form action="/profile" enctype="multipart/form-data" method="post" class="artist-update-form">
+            <h1 class="artist-update-title">Welcome to the Update Profile Page!</h1>
+            <p class="artist-update-text">Please fill out all of the required information in order update your profile.</p>
+            <div class="form-container">
+            <div>
+              <label for="artist-name">Your Name</label>
+              <input type="name" id="artist-name" />
+            </div>
+            <div>
+              <label for="bio-snippet">Bio Snippet<span class="snippet"> ( no more than 35 words )</span></label>
+              <textarea name="bio_snippet_text" id="bio-snippet-text" rows="4"></textarea>
+            </div>
+            <div>
+              <label for="web-address">Website URL</label>
+              <input type="url" id="url-link" />
+            </div>
+            <div>
+              <label for="profile-bio">Full Profile Bio</label>
+              <textarea name="full_profile_bio" id="full-profile-bio" rows="15"></textarea>
+            </div>
+            <div>
+              <label for="artwork-title">Featured Artwork Title</label>
+              <input type="artwork_title" id="artwork-title" />
+            </div>
+            <div>
+              <label for="artwork-price">Asking Price</label>
+              <input type="artwork_price" id="artwork-price" />
+            </div>
+            <div>
+              <label for="artwork-dimensions">Artwork Dimensions</label>
+              <input type="artwork_dimensions" id="artwork-dimensions" />
+            </div>
+            <div>
+              <label for="artwork-description">Artwork Description</label>
+              <textarea name="artwork_description" id="artwork-description" rows="10"></textarea>
+            </div>
+            <div class="upload-file">
+            <label for="image">Artwork File<span class="snippet"> ( image size no larger than 400px )</span></label>
+              <button type="submit" class="upload-image">Upload Image</button> 
+              <button type="submit" class="delete-image">Delete Image</button>
+            </div>
+
+            <!-- SAMPLE FORM -->
+            <!-- <form ref='uploadForm' id='uploadForm' action='http://localhost:8000/upload' method='post' encType="multipart/form-data">
+              <input type="file" name="sampleFile" />
+              <input type='submit' value='Upload!' />
+            </form>    -->
+            <!-- SAMPLE FORM -->
+            
+            <div class="artist-update-container">
+              <a href="/profile/1" class="artist-update-profile-button">Update Profile</a>
+              <a href="/profile/1" class="artist-view-profile-button">View Profile</a>
+              <a href="/" class="artist-delete-profile-button">Delete Profile</a>
+            </div>
+            </div>
+        </form>
+      </div>

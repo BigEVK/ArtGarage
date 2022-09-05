@@ -3,9 +3,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Garage</title>
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="icon" type="image/x-icon" href="../../images/am52r-bb94x-001.ico">
-    <link href="/stylesheets/star-rating.css" rel="stylesheet">
   </head>
   <body>
 
@@ -22,7 +21,7 @@
               <li><a href="/">Home</a></li>
               <li><a href="/artists">Artists</a></li>
               <li><a href="/login">Login</a></li>
-              <li id="logout"><a href="/">Logout</a></li>
+              <li id="logout"><a href="/logout">Logout</a></li>
             </ul>
           </nav>
         </div>
@@ -31,15 +30,14 @@
 
       {{!-- MAIN CONTENT START --}}
       <main>
-        {{{body}}}
+        {{{ body }}}
       </main>
       </div>
       {{!-- MAIN CONTENT END --}}
 
-      <footer>
+      {{!-- <footer>
         Thank you for visiting Art Garage!
-      </footer>
-
+      </footer> --}}
 <script src="js/star-rating.min.js"></script>
 <script>
     var stars = new StarRating('.star-rating');
