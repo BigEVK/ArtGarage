@@ -34,8 +34,9 @@ router.post('/login', (req, res) => {
                     req.session.user_id = dbUserData.id;
                     req.session.username = dbUserData.username;
                     req.session.loggedIn = true;
+                    req.session.isArtist = dbUserData.type === 'artist';
 
-                    res.redirect('/')
+                    res.redirect('/artists')
                 })
             } else {
                 res.status(500).send('invalid password');
@@ -51,15 +52,17 @@ router.post('/signup', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        type: req.body.user_type
     })
         .then(dbUserData => {
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.username = dbUserData.username;
                 req.session.loggedIn = true;
+                req.session.isArtist = req.body.user_type === 'artist';
 
-                res.json(dbUserData);
+                res.redirect(req.session.isArtist ? '/update-profile' : '/artists')
             });
         })
         .catch(err => {
