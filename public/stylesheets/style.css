@@ -475,7 +475,7 @@ input {
   margin-left: 15px;
 }
 
-.star-rating {
+/* .star-rating {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 20px;
@@ -505,7 +505,7 @@ select {
   appearance: none;
   font-family: 'Roboto Condensed';
 
-}
+} */
 
 .artist-view-profile-button {
   cursor: pointer;
