@@ -15,8 +15,8 @@ Post.init(
       primaryKey: true,
       autoIncrement: true
     },
-    image_urls: {
-      type: [DataTypes.STRING],
+    image_url: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     price: {

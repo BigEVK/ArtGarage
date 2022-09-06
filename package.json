@@ -30,6 +30,7 @@
     "fs-extra": "^10.1.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
-    "sequelize": "^6.21.4"
+    "sequelize": "^6.21.4",
+    "star-rating.js": "^4.3.0"
   }
 }

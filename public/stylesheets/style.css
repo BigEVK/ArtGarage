@@ -15,7 +15,6 @@
   --drk-gray: #212121;
 }
 
-
 /* CSS GLOBAL STYLES FOR APP */
 * {
   padding: 0;
@@ -379,7 +378,7 @@ input {
   transition: all 0.3s;
 }
 
-.buyer-login-button {
+.buyer-login-button .login-link {
   margin: 25px 0 0 25px;
   background-color: white;
   border: 3px solid var(--green);
@@ -396,9 +395,26 @@ input {
 }
 
 .login-button, .signup-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
   background-color: white;
   border: 3px solid var(--green);
   color: var(--green);
+}
+
+.login-link {
+  margin: 25px 0 0 15px;
+  background-color: white;
+  border: 3px solid var(--green);
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: var(--green);
+  transition: all 0.3s;
 }
 
 .signup-button {
@@ -472,40 +488,8 @@ input {
 }
 
 .star-rating-container {
-  margin-left: 15px;
+  margin: 13px 0 0 15px;
 }
-
-/* .star-rating {
-  overflow: hidden;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 3px;
-  border: none;
-  font-size: 16px;
-  transition: all 0.3s;
-  margin: 15px 0 0 0;
-  background-color: white;
-  border: 3px solid var(--blue);
-  color: var(--blue);
-  width: 175px;
-  text-align: center;
-  outline: none;
-  border: 3px solid var(--blue);
-  transition: all 0.3s;
-}
-
-.star-rating:hover {
-  background-color: var(--blue);
-  border: 3px solid var(--blue);
-  color: white;
-  opacity: 1;
-}
-
-select {
-  appearance: none;
-  font-family: 'Roboto Condensed';
-
-} */
 
 .artist-view-profile-button {
   cursor: pointer;
@@ -756,16 +740,6 @@ select {
 .buyer-comments {
   font-style: italic;
   font-size: 16px;
-}
-
-/* ========= FOOTER ========== */
-footer {
-  text-align: center;
-  background-color: rgba(110, 159, 183, 0.4);
-  padding: 20px 0 15px 0;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--drk-gray);
 }
 
 
