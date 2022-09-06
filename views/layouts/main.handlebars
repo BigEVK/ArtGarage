@@ -9,6 +9,7 @@
       type="image/x-icon"
       href="../../images/am52r-bb94x-001.ico"
     />
+    <link href="stylesheets/star-rating.css" rel="stylesheet" />
   </head>
   <body>
 
@@ -41,11 +42,10 @@
         {{{body}}}
       </main>
     </div>
-    {{! MAIN CONTENT END }}
-
-    {{! <footer>
-        Thank you for visiting Art Garage!
-      </footer> }}
+    <script src="javascript/star-rating.min.js"></script>
+    <script>
+      var stars = new StarRating('.star-rating');
+    </script>
 
   </body>
 </html>
