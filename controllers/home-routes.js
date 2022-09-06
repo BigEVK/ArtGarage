@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+const { Comment } = require('../models');
 
 router.get('/', (req, res) => {
   // console.log(req.session);
@@ -61,7 +62,23 @@ router.get('/signup', (req, res) => {
 
 router.get('/profile/:id', (req, res) => {
   const {id} = req.params;
-  res.render('artist-profile-page');
+      Comment.findAll(//{
+    //   where: {
+    //     post_id: id
+    //   }
+    // }
+    )
+        .then((dbCommentData) => {
+          console.log(dbCommentData)
+          // res.json(dbCommentData)
+          res.render('artist-profile-page');
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+
+  
 });
 
 router.get('/update-profile', (req, res) => {
