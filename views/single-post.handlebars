@@ -1,40 +1,42 @@
-<div class="buyer-single-post-container">
-  <h1 class="buyer-comment-title">Post A Comment!</h1>
-  <form action="/api/comment" method="post" class="buyer-comment-form">
-    <div>
-      <label for="comment-title">Comment Title</label>
-      <input type="title" id="comment-title" />
-    </div>
-    <div>
-      <label for="comment-text">Write A Comment</label>
-      <textarea name="comment-text" id="comment-text" rows="5"></textarea>
-    </div>
-    <div class="submit-comment">
-      <a href="/profile/1" class="submit-buyer-comment">Submit Comment</a>
-      <div class="star-rating-container">
-        <select class="star-rating">
-          <option value="">Select A Rating</option>
-          <option value="5">Excellent</option>
-          <option value="4">Very Good</option>
-          <option value="3">Average</option>
-          <option value="2">Poor</option>
-          <option value="1">Terrible</option>
-        </select>
+ <div class="buyer-single-post-container">
+        <h1 class="buyer-comment-title">Post A Comment!</h1>
+        <form class="buyer-comment-form">
+           <div>
+              <label for="comment-title">Comment Title</label>
+              <input type="title" id="comment-title" />
+            </div>
+            <div>
+              <label for="comment-text">Write A Comment</label>
+              <textarea name="comment-text" id="comment-text" rows="5"></textarea>
+            </div>
+            <div class="submit-comment">
+              <a class="submit-buyer-comment">Submit Comment</a>
+            <div class="star-rating-container">
+               <select class="star-rating">
+                  <option value="">Select A Rating</option>
+                  <option value="5">Excellent</option>
+                  <option value="4">Very Good</option>
+                  <option value="3">Average</option>
+                  <option value="2">Poor</option>
+                  <option value="1">Terrible</option>
+               </select>
+             </div>
+            </div>
+        </form>
       </div>
-    </div>
-  </form>
-</div>
 
-{{! <select class="star-rating">
+    {{!-- <select class="star-rating">
       <option value="">Select a rating</option>
       <option value="5">Excellent</option>
       <option value="4">Very Good</option>
       <option value="3">Average</option>
       <option value="2">Poor</option>
       <option value="1">Terrible</option>
-    </select> }}
+    </select> --}}
 
-<script src="/javascript/star-rating-min.js"></script>
-<script>
-  var stars = new StarRating('.star-rating');
-</script>
+    <script src="/javascript/star-rating.min.js"></script>
+    <script>
+      var stars = new StarRating('.star-rating');
+    </script>
+
+    <script src="/javascript/comment.js"></script>

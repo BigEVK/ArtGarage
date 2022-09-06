@@ -4,23 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Garage</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="icon" type="image/x-icon" href="../../images/am52r-bb94x-001.ico" />
-    <link href="stylesheets/star-rating.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../../images/am52r-bb94x-001.ico">
+    <link href="stylesheets/star-rating.css" rel="stylesheet">
   </head>
   <body>
 
     <div class="wrapper">
-      {{! HEADER START }}
+      {{!-- HEADER START --}}
       <header class="header-container">
         <div class="nav-container">
           <div class="logo">
-            <a href="/"><img
-                src="../../images/art-garage-logo.png"
-                alt="art garage logo"
-                class="art-garage-logo"
-              /></a>
+          <a href="/"><img src="../../images/art-garage-logo.png" alt="art garage logo" class="art-garage-logo"/></a>
           </div>
-          {{! NAV MENU START }}
+          {{!-- NAV MENU START --}}
           <nav class="menu">
             <ul class="menu-items">
               <li><a href="/">Home</a></li>
@@ -31,21 +27,17 @@
           </nav>
         </div>
       </header>
-      {{! HEADER END }}
+      {{!-- HEADER END --}}
 
-      {{! MAIN CONTENT START }}
+      {{!-- MAIN CONTENT START --}}
       <main>
-        {{{body}}}
+        {{{ body }}}
       </main>
-    </div>
-    {{! MAIN CONTENT END }}
+      </div>
+    <script src="javascript/star-rating.min.js"></script>
+    <script>
+      var stars = new StarRating('.star-rating');
+    </script>
 
-    {{! <footer>
-        Thank you for visiting Art Garage!
-      </footer> }}
-<script src="javascript/star-rating.min.js"></script>
-<script>
-  var stars = new StarRating('.star-rating');
-</script>
   </body>
 </html>

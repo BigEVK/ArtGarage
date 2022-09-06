@@ -31,25 +31,25 @@ const cloud_name = 'art-garage';
 const form = document.querySelector("form")
 const fileInput = document.querySelector("input[type=file]")
 fileInput.addEventListener("change", function (event) {
-    const data = new FormData();
-    data.append('file', form.files[0])
-    data.append('api_key', api_key)
-    // data.append('signature', signatureResponse.data.signature)
-    // data.append('timestamp', signatureResponse.data.timestamp)
-    axios.post(`https://api.cloudinary.com/v1_1/${cloud_name}/auto/upload`, data, {
-        headers: { "Content-Type": "multipart/form-data" },
-        onUploadProgress: function (event) {
-            console.log(event.loaded / event.total)
-        }
-    })
-        .then(function (cloudinaryResponse) {
-            const photoData = {
-                public_id: cloudinaryResponse.data.public_id,
-                version: cloudinaryResponse.data.version,
-                signature: cloudinaryResponse.data.signature
-            }
+  const data = new FormData();
+  data.append('file', form.files[0])
+  data.append('api_key', api_key)
+  // data.append('signature', signatureResponse.data.signature)
+  // data.append('timestamp', signatureResponse.data.timestamp)
+  axios.post(`https://api.cloudinary.com/v1_1/${cloud_name}/auto/upload`, data, {
+    headers: { "Content-Type": "multipart/form-data" },
+    onUploadProgress: function (event) {
+      console.log(event.loaded / event.total)
+    }
+  })
+    .then(function (cloudinaryResponse) {
+      const photoData = {
+        public_id: cloudinaryResponse.data.public_id,
+        version: cloudinaryResponse.data.version,
+        signature: cloudinaryResponse.data.signature
+      }
 
-            // axios.post("/do-something-with-photo", photoData)
-            console.log(cloudinaryResponse)
-        })
+      // axios.post("/do-something-with-photo", photoData)
+      console.log(cloudinaryResponse)
+    })
 })
