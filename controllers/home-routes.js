@@ -87,7 +87,6 @@ router.get('/update-profile', (req, res) => {
   const { id } = req.params;
   Profile.findOne({profile_id: req.session.user_id})
   .then( profileData => {
-    console.log(profileData, req.session.user_id)
     res.render('artist-update-page', { id: req.session.user_id, profileData: {
       name: profileData.name,
       snippet: profileData.snippet,
