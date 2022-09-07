@@ -1,53 +1,89 @@
-# Project Name
-## ArtGarage 
+# ArtGarage
 
-## Project Summary
+## The place that brings artists and potential buyers together.
 
-“An app that brings artists and potential buyers together”
+<br>
 
-## Developers
+## Purpose:
 
-1. Bethany Jennings
+Here at Art Garage we want to connect artists with potential buyers who are passionate about art. Artists are able to create a profile by introducing themselves by creating a profiling with their name, website link, a bio describing who they are as an artist and uploading a specific piece of artwork that they have to offer up for sale. If you're a potential buyer and you like a specific artist can leave a comment for everyone to read. You can even contact the artist by going to their personal website and sending them an email. Use the signup buttons below to create an account. Welcome to the Art Garage!
 
-2. Ron Dronet
+<br>
 
-3. Guadalupe Rocha
+## Heroku App Link:
 
-4. Eric VanKirk
+## https://art-garage.herokuapp.com/
 
-## Installation Instructions
+<br>
 
-- Clone our repo to your computer
+## **Table of contents:**
 
-- ...
+- [Installation](#installation)
+- [Start](#start)
+- [Usage](#usage)
+- [Contribute](#contribute)
 
+<br>
 
-## Animated Gifs/Pictures of App
+<div align="left">
+    <img src="./public/images/art-garage-screenshot.jpg" width="800px" /> 
+</div>
 
-- Place various screens of your app here after they have been built
+<br>
 
-## Tech Stack
+<br>
 
-- What languages is it written with: HTML, CSS, JavaScript  
+## This Full-stack App Was Created Using:
 
-- What libraries are used: BCrypt, Node.js, Express.js, Express-Session, Handlebars.js, MySQL2, Sequelize, DotEnv, Connect-Session-Sequelize, Jest
+- HTML
+- CSS
+- JavaScript
+- Star-rating.js
+- NodeJS
+- MySQL/MySQL2
+- Sequelize
+- Express
+- Express-handlebars
+- Express-session
+- Connect-session-sequelize
+- Bcrypt
+- Insomnia
+- Dotenv package
+- Heroku
+- Fs-extra
+- Body-parser
+- GitHub
 
-- Other: 
+<br>
 
+## Installation:
 
-## APIs
+### _To install all packages use this command in the the terminal:_
 
-- server-side APIs
+### npm i
 
-## MVP (Minimum Viable Product)
+<br>
 
-- Users can view the initial page which contains images and small bios of artists. From there they can sign up as either a user to view the images or as an artist to post their art.
-- As an artist thy will be able to upload their photos and update their profile/bio/prices.
-- As a buyer/viewer they can view all artist and artwork and contact the artist.
+## Start:
 
+### _To start use this command in the the terminal => then use http://localhost:3001/ in the browser:_
 
-## Stretch Goals
+### npm start
 
-- Enable artists to host live art shows in VR
-- Live Auction feature
-- Private messages between artists and buyers.
+<br>
+
+## Usage:
+
+### The respository can be cloned and placed in a folder remotely.
+
+<br>
+
+## Contribute:
+
+### Please contact us regarding contributing to this repository. All additions must be approved.
+
+<br>
+
+## Contributing Programmers:
+
+Bethany Jennings, Eric VanKirk, Guadalupe Rocha, Ron Dronet
