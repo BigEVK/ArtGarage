@@ -121,7 +121,7 @@ ul {
 
 /* ====HOMEPAGE CONTAINER HOLDING ARTIST & WELCOME CONTAINER==== */
 .content-row-container {
-  display: flex;
+  display: block;
   width: 80%;
   height: 100%;
   margin: 80px auto 0 auto;
@@ -129,7 +129,7 @@ ul {
 
 
 /* ======= HOMEPAGE -- ARTIST COLUMN ======= */
-.artist-column {
+/* .artist-column {
   width: 65%;
 }
 
@@ -190,35 +190,43 @@ ul {
   position: absolute;
   font-size: 11px;
   top: 3px;
-}
+} */
 /* END -- HOMEPAGE -- ARTIST COLUMN */
 
 
 /* ====== HOMEPAGE -- WELCOME COLUMN ======= */
 .welcome-column {
-  width: 35%;
-  margin-left: 55px;
+  width: 100%;
+  height: 100%;
 }
 
 .welcome-headline {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 42px;
-  padding-bottom: 17px;
+  font-size: 55px;
+  padding-bottom: 50px;
   letter-spacing: -0.03rem;
   color: var(--drk-gray);
+  text-align: center;
 }
 
-.about-us {
-  font-size: 14px;
-  line-height: 25px;
+#homepage-heading {
+  line-height: 65px;
+}
+
+#homepage-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
   color: var(--med-gray);
+  text-align: justify;
+  margin-bottom: 50px;
 }
 
 /* SIGN UP OPTIONS */
 .signup-options {
-  margin-top: 35px;
-  text-align: left;
+  margin-top: 25px;
+  text-align: center;
+  justify-content: center;
 }
 
 /* BUTTONS */
@@ -256,6 +264,11 @@ button:hover {
 
 .dashboard-artist-column {
   width: 100%;
+}
+
+.feature-artist-container {
+  background-color: white;
+  border-radius: 10px;
 }
 
 .dashboard-heading {
@@ -369,7 +382,7 @@ input {
 }
 
 .buyer-signup-button {
-  margin: 25px 0 0 15px;
+  margin: 25px 0 0 35px;
   background-color: var(--green);
   border: 3px solid var(--green);
   padding: 8px 16px;
@@ -768,7 +781,7 @@ input {
   }
 
   .welcome-headline {
-    line-height: 38px;
+    /* line-height: 38px; */
   }
 
   .about-us {
@@ -868,7 +881,7 @@ input {
 
   .welcome-headline {
     font-size: 20px;
-    line-height: 38px;
+    /* line-height: 38px; */
   }
 
   .about-us {

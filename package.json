@@ -21,6 +21,7 @@
   "homepage": "https://github.com/BigEVK/ArtGarage#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "cloudinary": "^1.31.0",
     "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",

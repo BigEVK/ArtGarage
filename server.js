@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers');
+const bodyParser = require('body-parser')
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -23,6 +24,8 @@ const sess = {
 
 // app.use(session(sess));
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 const PORT = process.env.PORT || 3001;
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
