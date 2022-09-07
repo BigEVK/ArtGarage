@@ -1,32 +1,31 @@
 <div class="artist-profile-container">
         <div class="profile-container">
 
-          <h1 class="profile-artist-name">Louis Escobedo</h1>
+          <h1 class="profile-artist-name">{{ profileData.name }}</h1>
 
           <h2 class="profile-heading">Website:</h2>
-          <a href="https://www.louisescobedo.com/" target="blank" id="url-link">www.LouisEscobedo.com</a>
+          <a href="{{ profileData.url }}" target="blank" id="url-link">{{ profileData.url }}</a>
 
-          <p id="full-profile-bio">Louis Escobedo was born in Sweetwater, Texas, and received a BFA in Advertising Art from Sam Houston State University in Huntsville, Texas. He began his painting career at age 6 when he won the best of show in his elementary school in Sweetwater Texas.  In 1974, after graduation from college he began his career as an artist honing his talents to become a freelance illustrator in Texas. In 1979, he finally achieved his goal. During his time as an illustrator, he received a gold medal from the Society of Illustrators in New York in 1981 and many other awards from many organizations such as the Dallas Texas Visual Society.  Louis and Yolanda currently reside in Santa Fe New Mexico.
-          In 1985, he shifted his professional focus, moving from illustration to fine art. In 1990, Louis and his wife, Yolanda, moved to Denver, Colorado. During his fine art career, Louis exhibited in many galleries across the United States, including California, Colorado, Oklahoma, Texas, Illinois, Virginia, and Maryland. In 1994, Louis was awarded his first Gold Medal from the National Oil Painters of America (OPA) and received his second one with a $25,000 award in 2014.  He is one of only two artists receiving this prestigious award twice from this 27-year-old organization. In 2019 Louis received the Master Signature status in Oil Painters of America based on his mastery of oil painting and accomplishments in the world of representational art.
+          <p id="full-profile-bio">{{ profileData.bio }}
           </p>
 
           <div class="descriptors">
             <div class="title">
               <h2 class="profile-heading">Artwork Title:</h2>
-              <p id="artwork-title">"Trees in the Wind"</p>
+              <p id="artwork-title">{{ profileData.artwork_title}}</p>
             </div>
             <div class="price">
               <h2 class="profile-heading">Price:</h2>
-              <p id="artwork-price">$1,000</p>
+              <p id="artwork-price">${{ profileData.price }}</p>
             </div>
             <div class="size">
               <h2 class="profile-heading">Artwork Dimensions:</h2>
-              <p id="artwork-dimensions">60" x 70"</p>
+              <p id="artwork-dimensions">{{ profileData.dimensions }}</p>
             </div>
           </div>
 
               <h2 class="profile-heading">Artwork Description:</h2>
-              <p id="artwork-description">Let the wind blow and sing its songs to stir the emotions, let it bring the sweet memories of times gone and hopes for a good future ahead. Let the wind remind us that we are here in this present moment, in the gift of living, and call us to adore those whom are close and give their days to us
+              <p id="artwork-description">{{ profileData.art_description }}
               </p>
             <div class="artwork-container">
               <img src="../../images/painting-sample.jpg" alt="Oil Painting">

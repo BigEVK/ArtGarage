@@ -5,35 +5,35 @@
             <div class="form-container">
             <div>
               <label for="artist-name">Your Name</label>
-              <input type="text" name="name" id="artist-name" />
+              <input type="text" name="name" id="artist-name" value="{{ profileData.name }}"/>
             </div>
             <div>
               <label for="bio-snippet">Bio Snippet<span class="snippet"> ( no more than 35 words )</span></label>
-              <textarea name="snippet" id="bio-snippet-text" rows="4"></textarea>
+              <textarea name="snippet" id="bio-snippet-text" rows="4">{{ profileData.snippet }}</textarea>
             </div>
             <div>
               <label for="web-address">Website URL</label>
-              <input type="url" name="url" id="url-link" />
+              <input type="url" name="url" id="url-profile-link" value="{{ profileData.url }}"/>
             </div>
             <div>
               <label for="profile-bio">Full Profile Bio</label>
-              <textarea name="bio" id="full-profile-bio" rows="15"></textarea>
+              <textarea name="bio" id="full-profile-bio" rows="15">{{ profileData.bio }}</textarea>
             </div>
             <div>
               <label for="artwork-title">Featured Artwork Title</label>
-              <input type="text" name="artwork_title" id="artwork-title" />
+              <input type="text" name="artwork_title" id="artwork-title" value="{{ profileData.artwork_title}}"/>
             </div>
             <div>
               <label for="artwork-price">Asking Price</label>
-              <input type="number" name="price" id="artwork-price" />
+              <input type="number" name="price" id="artwork-price" value="{{ profileData.price }}"/>
             </div>
             <div>
               <label for="artwork-dimensions">Artwork Dimensions</label>
-              <input type="text" name="dimensions" id="artwork-dimensions" />
+              <input type="text" name="dimensions" id="artwork-dimensions" value="{{ profileData.dimensions }}"/>
             </div>
             <div>
               <label for="artwork-description">Artwork Description</label>
-              <textarea name="art_description" id="artwork-description" rows="10"></textarea>
+              <textarea name="art_description" id="artwork-description" rows="10">{{ profileData.art_description }}</textarea>
             </div>
             <div class="upload-file">
             <label for="image">Artwork File<span class="snippet"> ( image size no larger than 400px )</span></label>
@@ -50,7 +50,7 @@
             
             <div class="artist-update-container">
               <button class="artist-update-profile-button update-link" id="update-page-button">Update Profile</button>
-              <a href="/artist/id" class="view-link"><button class="artist-view-profile-button">View Profile</button></a>
+              <a href="/profile/{{id}}" class="view-link artist-view-profile-button">View Profile</a>
               <a href="/api/profile/delete" class="delete-link artist-delete-profile-button">Delete Profile</a>
             </div>
             </div>

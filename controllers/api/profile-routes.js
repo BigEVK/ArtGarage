@@ -4,25 +4,54 @@ const { User, Profile } = require('../../models');
 
 //Create a comment
 router.post('/', (req, res) => {
-  Profile.create({
-    name: req.body.name,
-    snippet: req.body.snippet,
-    url: req.body.url,
-    bio: req.body.bio,
-    artwork_title: req.body.artwork_title,
-    price: req.body.price,
-    dimensions: req.body.dimensions,
-    art_description: req.body.art_description,
-    profile_id: req.session.user_id
-  })
-    .then(dbCommentData => {
-      res.redirect('/update-profile')
+  Profile.findOne({profile_id:req.session.user_id})
+  .then( foundProfile => {
+    if (foundProfile) {
+      Profile.update(
+        {
+        name: req.body.name,
+        snippet: req.body.snippet,
+        url: req.body.url,
+        bio: req.body.bio,
+        artwork_title: req.body.artwork_title,
+        price: req.body.price,
+        dimensions: req.body.dimensions,
+        art_description: req.body.art_description,
+        }, { where: { profile_id: req.session.user_id } })
+        .then(dbCommentData => {
+          res.redirect('/update-profile')
+      })
+        .catch(err => {
+          console.log(err);
+          res.redirect('/update-profile?err=' + err.message)
+      });
+    }
+    else {
+
+    
+    Profile.create({
+      name: req.body.name,
+      snippet: req.body.snippet,
+      url: req.body.url,
+      bio: req.body.bio,
+      artwork_title: req.body.artwork_title,
+      price: req.body.price,
+      dimensions: req.body.dimensions,
+      art_description: req.body.art_description,
+      profile_id: req.session.user_id
     })
-    .catch(err => {
-      console.log(err);
-      res.redirect('/update-profile?err=' + err.message)
+      .then(dbCommentData => {
+        res.redirect('/update-profile')
+      })
+      .catch(err => {
+        console.log(err);
+        res.redirect('/update-profile?err=' + err.message)
+      });
+    }
     });
-});
+    
+  })
+
 
 //Get all comments
 // router.get("/", (req, res) => {
