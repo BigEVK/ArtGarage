@@ -12,7 +12,7 @@ Here at Art Garage we want to connect artists with potential buyers who are pass
 
 ## Heroku App Link:
 
-## https://art-garage.herokuapp.com/
+## https://art-garage-app.herokuapp.com/
 
 <br>
 
