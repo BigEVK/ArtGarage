@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/login', (req, res) => {
 
-  User.findOne({ where: req.body.username })
+  User.findOne({ where: {username: req.body.username} })
     .then(dbUserData => {
       if (User.checkPassword(req.body.password)) {
         req.session.save(() => {
