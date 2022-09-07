@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const bcrypt = require('bcrypt');
 
 router.get('/', (req, res) => {
   User.findAll({
@@ -30,7 +31,10 @@ router.post('/login', (req, res) => {
 
   User.findOne({ where: {username: req.body.username} })
     .then(dbUserData => {
-      if (User.checkPassword(req.body.password)) {
+      if (!dbUserData) return res.status(500).send('account not found');
+      console.log(dbUserData)
+      const passwordCheck = bcrypt.compareSync(req.body.password, dbUserData.password);
+      if (passwordCheck) {
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
           req.session.username = dbUserData.username;
