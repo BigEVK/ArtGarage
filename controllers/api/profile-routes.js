@@ -52,6 +52,7 @@ router.post('/', (req, res) => {
     
   })
 
+module.exports = router;
 
 //Get all comments
 // router.get("/", (req, res) => {
@@ -62,6 +63,3 @@ router.post('/', (req, res) => {
 //       res.status(500).json(err);
 //     });
 // });
-
-
-module.exports = router;

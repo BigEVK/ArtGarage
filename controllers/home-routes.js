@@ -87,20 +87,23 @@ router.get('/update-profile', (req, res) => {
   const { id } = req.params;
   Profile.findOne({profile_id: req.session.user_id})
   .then( profileData => {
-    res.render('artist-update-page', { id: req.session.user_id, profileData: {
-      name: profileData.name,
-      snippet: profileData.snippet,
-      url: profileData.url,
-      bio: profileData.bio,
-      artwork_title: profileData.artwork_title,
-      price: profileData.price,
-      dimensions: profileData.dimensions,
-      art_description: profileData.art_description
-    } });
-  }).catch(err => {
-    res.status(500).send(err.message)
-  })
-});
+    if (profileData) {
+      res.render('artist-update-page', {
+        id: req.session.user_id, profileData: {
+          name: profileData.name,
+          snippet: profileData.snippet,
+          url: profileData.url,
+          bio: profileData.bio,
+          artwork_title: profileData.artwork_title,
+          price: profileData.price,
+          dimensions: profileData.dimensions,
+          art_description: profileData.art_description
+        }
+      });
+    } else {
+      res.render('artist-update-page', {id: req.session.user_id})
+    }
+    
 
 router.get('/add-comments', (req, res) => {
   res.render('single-post');
