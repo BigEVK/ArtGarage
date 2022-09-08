@@ -31,7 +31,7 @@
               <label for="artwork-dimensions">Artwork Dimensions</label>
               <input type="text" name="dimensions" id="artwork-dimensions" value="{{ profileData.dimensions }}"/>
             </div>
-            <div>
+            {{!-- <div>
               <label for="artwork-description">Artwork Description</label>
               <textarea name="art_description" id="artwork-description" rows="10">{{ profileData.art_description }}</textarea>
             </div>
@@ -39,7 +39,7 @@
             <label for="image">Artwork File<span class="snippet"> ( image size no larger than 400px )</span></label>
               <button type="submit" class="upload-image">Upload Image</button> 
               <button type="submit" class="delete-image">Delete Image</button>
-            </div>
+            </div> --}}
 
             <!-- SAMPLE FORM -->
             <!-- <form ref='uploadForm' id='uploadForm' action='http://localhost:8000/upload' method='post' encType="multipart/form-data">
@@ -47,7 +47,7 @@
               <input type='submit' value='Upload!' />
             </form>    -->
             <!-- SAMPLE FORM -->
-            
+            <label for="button" class="button-instructions">To create or update a profile click the UPDATE PROFILE button first then the VIEW PROFILE button afterwards</label>
             <div class="artist-update-container">
               <button class="artist-update-profile-button update-link" id="update-page-button">Update Profile</button>
               <a href="/profile/{{id}}" class="view-link artist-view-profile-button">View Profile</a>
