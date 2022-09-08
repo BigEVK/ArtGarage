@@ -101,9 +101,12 @@ router.get('/update-profile', (req, res) => {
         }
       });
     } else {
-      res.render('artist-update-page', {id: req.session.user_id})
+      res.render('artist-update-page', { id: req.session.user_id })
     }
-    
+  }).catch(err => {
+    res.status(500).send(err.message)
+  })
+});
 
 router.get('/add-comments', (req, res) => {
   res.render('single-post');
